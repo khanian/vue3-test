@@ -1,2 +1,2 @@
 let msg = "World";
-console.log(`Hello ${msg}!!`);
+console.log(`hello ${msg}!!`);
