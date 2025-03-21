@@ -1,16 +1,16 @@
 <template>
     <li>
-        <input type="checkbox" v-model="checked" /> 옵션1 
+        <input type="checkbox" :checked="checked" /> {{ name }}
     </li>
 </template>
 
 <script>
     export default {
         name: "CheckboxItem",
-        data() {
-            return {
-                checked: false
-            };
+        props : [ "name", "checked" ],
+        created() {
+            console.log(this.name, this.checked);
+            this.checked = true;
         }
     }
 </script>
