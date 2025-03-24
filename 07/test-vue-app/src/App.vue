@@ -4,7 +4,7 @@
     <hr>
     <ul>
       <CheckboxItem v-for="idol in idols" :key="idol.id"
-        :name="idol.name" :checked="idol.checked" />
+        :id="idol.id" :name="idol.name" :checked="idol.checked" />
     </ul>
   </div>
 </template>
@@ -21,11 +21,11 @@
         idols: [
           { id: 1, name: "BTS", checked: true },
           { id: 2, name: "BLACKPINK", checked: false },
-          { id: 3, name: "TWICE", checked: false },
-          { id: 4, name: "Red Velvet", checked: false },
-          { id: 5, name: "EXO", checked: false },
-          { id: 6, name: "NCT", checked: false },
-          { id: 7, name: "ITZY", checked: false },
+          { id: 3, name: "TWICE", checked: true },
+          { id: 4, name: "Red Velvet" },
+          { id: 5, name: "EXO" },
+          { id: 6, name: "NCT" },
+          { id: 7, name: "ITZY" },
           { id: 8, name: "SEVENTEEN", checked: false },
           { id: 9, name: "MAMAMOO", checked: false },
           { id: 10, name: "IU", checked: false }

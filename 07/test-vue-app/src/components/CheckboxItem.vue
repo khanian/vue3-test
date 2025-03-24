@@ -1,16 +1,20 @@
 <template>
     <li>
-        <input type="checkbox" :checked="checked" /> {{ name }}
+        <input type="checkbox" :checked="checked" /> {{ id }} - {{ name }}
     </li>
 </template>
 
 <script>
     export default {
         name: "CheckboxItem",
-        props : [ "name", "checked" ],
-        created() {
-            console.log(this.name, this.checked);
-            this.checked = true;
+        props : {
+            id: [Number, String],
+            name: String,
+            checked: {
+                type: Boolean,
+                required: false,
+                default: false
+            }
         }
     }
 </script>
