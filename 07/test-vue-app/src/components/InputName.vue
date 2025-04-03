@@ -9,6 +9,13 @@
 <script>
     export default {
         name: "InputName",
+        // emits: [ "nameChanged1" ],
+        emits: {
+            nameChanged: (e) => {
+                console.log("inputName vue 이벤트발신", e)
+                return e.name && typeof(e.name) === 'string' && e.name.trim().length >= 3 ? true : false
+            }
+        },
         data() {
             return {
                 name: ""
