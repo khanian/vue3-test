@@ -5,8 +5,8 @@
     </div>
     <div classs="card card-default card-borderless">
       <div class="card-body">
-        <InputTodo @add-todo="addTodo" />
-        <TodoList :todoList="todoList" @delete-todo="deleteTodo" @toggle-completed="toggleCompleted" /> 
+        <InputTodo />
+        <TodoList :todoList="todoList" /> 
       </div>
     </div>
   </div>
@@ -23,6 +23,11 @@ export default {
   components: {
     TodoList,
     InputTodo
+  },
+  created() {
+    this.emitter.on("add-todo", this.addTodo);
+    this.emitter.on("delete-todo", this.deleteTodo);
+    this.emitter.on("toggle-completed", this.toggleCompleted);
   },
   data() {
     return {

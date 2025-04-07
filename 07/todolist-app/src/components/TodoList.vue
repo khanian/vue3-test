@@ -3,8 +3,7 @@
         <div class="col">
             <ul class="list-gru=oup">
                 <TodoListItem v-for="todoItem in todoList" :key="todoItem.id" 
-                :todoItem="todoItem" @delete-todo="$emit('delete-todo', $event)"
-                @toggle-completed="$emit('toggle-completed', $event)" />
+                    :todoItem="todoItem" /> 
             </ul>
         </div>
     </div>
@@ -23,6 +22,6 @@ export default {
             required: true
         }
     },
-    emits: [ "delete-todo", "toggle-completed" ]
+    // emits: [ "delete-todo", "toggle-completed" ]
 }
 </script>
