@@ -6,7 +6,7 @@
             {{ todoItem.todo }} {{ todoItem.completed ? '(완료)' : '' }}
         </span>
         <span class="float-end badge bg-secondary pointer" 
-            @click.stop="emitter.emit('delete-todo', todoItem.id)">삭제</span>
+            @click.stop="emit('delete-todo', todoItem.id)">삭제</span>
 
     </li>
 </template>
