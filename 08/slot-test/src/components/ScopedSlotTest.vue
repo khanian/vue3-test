@@ -21,7 +21,7 @@
 <script>
 import CheckBoxList from './CheckBoxList.vue';
 
-<export default {
+export default {
     name: "ScopedSlotTest",
     components: {
         CheckBoxList
@@ -29,10 +29,10 @@ import CheckBoxList from './CheckBoxList.vue';
     data() {
         return {
             items: [
-                { id: "V", checked: true, label: "Vue" },
-                { id: "A", checked: false, label: "Angular" },
-                { id: "R", checked: false, label: "React" },
-                { id: "S", checked: false, label: "Svelte" },
+                { id:"V", checked:true, label:"Vue" },
+                { id:"A", checked:false, label:"Angular" },
+                { id:"R", checked:false, label:"React" },
+                { id:"S", checked:false, label:"Svelte" },
             ]
         }
     },
@@ -42,7 +42,7 @@ import CheckBoxList from './CheckBoxList.vue';
             item.checked = e.checked;
         }
     }
-}>
+}
 </script>
 
 <style scoped>

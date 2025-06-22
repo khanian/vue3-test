@@ -30,10 +30,10 @@ export default {
     data() {
         return {
             items: [
-                { id: "V", label: "Vue", checked: true },
-                { id: "A", label: "Angular", checked: false },
-                { id: "R", label: "React", checked: false },
-                { id: "S", label: "Svelte", checked: false },
+                { id:"V", checked:true, label:"Vue" },
+                { id:"A", checked:false, label:"Angular" },
+                { id:"R", checked:false, label:"React" },
+                { id:"S", checked:false, label:"Svelte" },
             ]
         }
     },
