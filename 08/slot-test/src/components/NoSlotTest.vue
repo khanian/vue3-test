@@ -10,28 +10,28 @@
 <script>
 import CheckBox1 from './CheckBox1.vue';
 
-    export default {
-        name: "NoSlotTest",
-        components: {
-            CheckBox1
-        },
-        data() {
-            return {
-                items: [
-                    { id: "V", label: "Vue", checked: true },
-                    { id: "A", label: "Angular", checked: false },
-                    { id: "R", label: "React", checked: false },
-                    { id: "S", label: "Svelte", checked: false },
-                ]
-            }
-        },
-        methods: {
-            CheckBoxChanged(e) {
-                let item = this.items.find((item) => item.id === e.id);
-                item.checked = e.checked;
-            }
+export default {
+    name: "NoSlotTest",
+    components: {
+        CheckBox1
+    },
+    data() {
+        return {
+            items: [
+                { id: "V", label: "Vue", checked: true },
+                { id: "A", label: "Angular", checked: false },
+                { id: "R", label: "React", checked: false },
+                { id: "S", label: "Svelte", checked: false },
+            ]
+        }
+    },
+    methods: {
+        CheckBoxChanged(e) {
+            let item = this.items.find((item) => item.id === e.id);
+            item.checked = e.checked;
         }
     }
+}
 </script>
 
 <style scoped>
