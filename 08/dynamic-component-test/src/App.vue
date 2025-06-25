@@ -12,7 +12,9 @@
     </nav>
   </div>
   <div class="container">
-    <component :is="currentTab"></component>
+    <keep-alive include="CoralSeaTab,MidwayTab">
+      <component :is="currentTab"></component>
+    </keep-alive>
   </div>
 </template>
 
