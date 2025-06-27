@@ -4,7 +4,7 @@
     <SongList :songs="songs" />
     <br><br>
     <button @click="changeModal">Teleport를 이용한 Modal 기능</button>
-    <Teleport to="#Modal">
+    <Teleport to="#modal">
       <Modal v-if="isModal" />
     </Teleport>
   </div>
